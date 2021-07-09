@@ -3,12 +3,6 @@ import * as path from 'path';
 import { fetchDeploy } from './fetch/vercel';
 
 const region = 'asia-northeast1';
-
-// bucket を指定する方法（おそらくGCPのStorageも扱いたいときに使う）
-// const bucket = 'blog-manager-5d306.appspot.com';
-// const objectBuilder = functions.region(region).storage.bucket(bucket).object();
-
-// bucket を指定しない方法（同じプロジェクト内のFirebase Storageを使用する）
 const objectBuilder = functions.region(region).storage.object();
 
 /**
